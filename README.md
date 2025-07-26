@@ -2,14 +2,14 @@
 
 # 📸 Smart Camera – AI Image Identifier
 
-Smart Camera is a smart, lightweight image classifier web app built using Clarifai's general recognition model. It is available as a Progressive Web App (PWA) and also as an Android app on the Google Play Store.
+Smart Camera is a smart, lightweight image classifier web app built using Mobile Net's general recognition model. It is available as a Progressive Web App (PWA) and also as an Android app on the Google Play Store.
 
 ---
 
 ## 🚀 Features
 
-- 🧠 **AI-Powered Image Recognition** – Identify objects using Clarifai's model
-- 💻 **PWA Support** – Works offline with installable web experience
+- 🧠 **AI-Powered Image Recognition** – Identify objects using Mobile Net's model
+- 💻 **PWA Support** – Works offline with installable web experience - "https://smart-camera-3-15-2013.web.app"
 - 📱 **Android App** – Built with Capacitor and native integrations
 - 📊 **Firebase Analytics** – Tracks usage metrics
 - 🧩 **Firebase Crashlytics** – Automatically reports crashes
@@ -21,7 +21,7 @@ Smart Camera is a smart, lightweight image classifier web app built using Clarif
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, JavaScript (Vanilla)
-- **AI Model**: Clarifai General Image Recognition
+- **AI Model**: Mobile Net's General Image Recognition
 - **PWA**: Service Worker + manifest.json
 - **Firebase**: Hosting, Analytics, Crashlytics
 - **Android**: Capacitor + Java bridge (AdMob, Firebase SDK)
