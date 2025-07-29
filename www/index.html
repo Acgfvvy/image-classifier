@@ -4,12 +4,15 @@
     <script type="module" src="firebase-init.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4CAF50">
+    
     <meta name="description" content="Smart Camera - Image Classifier using TensorFlow.js">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Smart Camera">
     <link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192x192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+<meta name="theme-color" content="#990000">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
     <title>Smart Camera - Image Classifier</title>
     <style>
@@ -169,9 +172,10 @@
                    id="fileInput" 
                    class="file-input" 
                    accept="image/*" 
-                   aria-label="Upload an image for classification">
-            <label for="fileInput" class="file-input-label">
-                Choose an Image to Classify
+                   aria-label="Upload an image for classification" 
+                   disabled>
+            <label for="fileInput" class="file-input-label" id="fileInputLabel">
+                Loading model, please wait...
             </label>
         </div>
 
@@ -182,6 +186,7 @@
                  aria-hidden="true">
         </div>
 
+        <div id="status" style="text-align:center; color:#666; margin:12px 0; font-size:15px;">🔄 Loading model...</div>
         <div id="result" class="result" aria-live="polite">
             Select an image to classify.
         </div>
@@ -218,16 +223,24 @@
         
         let isModelLoading = true;
 
+        document.getElementById('fileInput').disabled = true;
+        document.getElementById('fileInputLabel').textContent = 'Loading model, please wait...';
+        document.getElementById('status').textContent = '🔄 Loading model...';
+
         // Update UI when model is loaded
         modelPromise
             .then(() => {
                 isModelLoading = false;
                 updateResult('Model loaded! Select an image to classify.', 'success');
+                document.getElementById('fileInput').disabled = false;
+                document.getElementById('fileInputLabel').textContent = 'Choose an Image to Classify';
+                document.getElementById('status').textContent = '✅ Ready';
                 console.log('MobileNet model loaded successfully');
             })
             .catch(error => {
                 console.error('Error loading model:', error);
                 updateResult('Error loading the model. Please check your internet connection and refresh the page.', 'error');
+                document.getElementById('status').textContent = '❌ Model failed to load.';
             });
 
         // Helper functions
