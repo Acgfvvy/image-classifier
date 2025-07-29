@@ -1,3 +1,20 @@
+# Keep Capacitor core
+-keep class com.getcapacitor.** { *; }
+
+# Keep Firebase and Google Play Services (if used)
+-keep class com.google.firebase.** { *; }
+-keep class com.google.android.gms.** { *; }
+
+# Keep AdMob classes
+-keep class com.google.android.ump.** { *; }
+-keep class com.google.android.gms.ads.** { *; }
+
+# Keep Cordova/Plugin interfaces (if you use any Cordova)
+-keep class org.apache.cordova.** { *; }
+
+# Optional: Keep models, API classes
+-keep class com.gmail.omsjsr.smartcamera.** { *; }
+
 # Add project specific ProGuard rules here.
 # You can control the set of applied configuration files using the
 # proguardFiles setting in build.gradle.
