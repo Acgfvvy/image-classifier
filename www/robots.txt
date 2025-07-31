@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smart-camera-3-15-2013.web.app/sitemap.xml
