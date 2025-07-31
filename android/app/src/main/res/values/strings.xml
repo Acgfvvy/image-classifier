@@ -5,5 +5,5 @@
     <string name="package_name">com.gmail.omsjsr.smartcamera</string>
     <string name="custom_url_scheme">com.gmail.omsjsr.smartcamera</string>
     <string name="admob_app_id">ca-app-pub-9318113506920623~2550854133</string>
-    <string name="admob_banner_id">ca-app-pub-9318113506920623/9022904858</string>
+    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
