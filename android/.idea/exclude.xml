@@ -1,5 +1,0 @@
-<project version="4">
-  <component name="IndexingFlags">
-    <excludePattern pattern="file://$PROJECT_DIR$/notes.txt" />
-  </component>
-</project>
